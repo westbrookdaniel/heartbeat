@@ -39,7 +39,7 @@ EOF
 opencode run "$PROMPT" -m "openai/gpt-5.4" > "$OUT"
 
 mv "$TASK" "$DONE_TASK"
-printf '\n\n---\nLOG (%s)\n%s\n' "$(date -Is)" "$(cat "$OUT")" >> "$DONE_TASK"
+printf '\n\n---\nLOG (%s)\n%s\n' "$(date)" "$(cat "$OUT")" >> "$DONE_TASK"
 rm -f "$OUT"
 
 date > "$RUN/last-heartbeat.txt"
