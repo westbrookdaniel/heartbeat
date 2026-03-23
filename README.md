@@ -15,3 +15,9 @@ Run it every hour with cron:
 ```
 
 Install that with `crontab -e`.
+
+Prompt to add to another agent's `AGENTS.md`:
+
+```md
+To queue a task, create a new Markdown file in `queue/` describing the work to run in `workspace/`. To check status, look for the task file in `queue/` if it is pending or in `done/` if it has finished; completed tasks also include the appended JSON run log.
+```
