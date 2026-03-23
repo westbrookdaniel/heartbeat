@@ -36,9 +36,10 @@ $TASK_BODY
 EOF
 )"
 
-opencode -p "$PROMPT" --format json > "$OUT"
+opencode run "$PROMPT" -m "openai/gpt-5.4" > "$OUT"
+
 mv "$TASK" "$DONE_TASK"
 printf '\n\n---\nLOG (%s)\n%s\n' "$(date -Is)" "$(cat "$OUT")" >> "$DONE_TASK"
 rm -f "$OUT"
 
-date -Is > "$RUN/last-heartbeat.txt"
+date > "$RUN/last-heartbeat.txt"
