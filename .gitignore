@@ -1,0 +1,11 @@
+/done/*
+!/done/keep
+
+/queue/*
+!/queue/keep
+
+/run/*
+!/run/keep
+
+/workspace/*
+!/workspace/keep
